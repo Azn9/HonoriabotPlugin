@@ -1,0 +1,9 @@
+name: HonoriabotPlugin
+version: '${version}'
+main: dev.azn9.honoriabotplugin.HonoriabotApi
+author: Azn9
+commands:
+  link:
+    description: Vous permets de lier vos  comptes Discord et Minecraft
+  unlink:
+    description: Vous permets de délier vos comptes Discord et Minecraft

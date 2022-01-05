@@ -1,0 +1,31 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'java'
+}
+
+group = 'dev.azn9'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url = 'https://nexus.azn9.dev/repository/public-snapshots/'
+    }
+}
+
+dependencies {
+    implementation 'io.sentry:sentry:5.5.2'
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    compileOnly 'com.destroystokyo.paper:paper:1.8.8-R0.1-SNAPSHOT'
+}
+
+processResources {
+    def props = [version: version]
+    inputs.properties props
+    filteringCharset 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}
