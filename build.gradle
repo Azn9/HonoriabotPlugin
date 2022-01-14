@@ -6,6 +6,8 @@ plugins {
 group = 'dev.azn9'
 version = '0.0.1-SNAPSHOT'
 
+compileJava.options.encoding = 'UTF-8'
+
 repositories {
     mavenCentral()
 
